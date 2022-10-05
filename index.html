@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Go Box</title>
 </head>
@@ -21,7 +22,7 @@
 
         <a href="index.html"><img src="./assets/img/logo.jpeg" alt="logo gobox"></a>
 
-        <nav>
+        <nav class="navpc">
 
             <ul>
                 <a href="./pages/actividades.html">
@@ -47,36 +48,42 @@
 
     <main>
 
-        <section class="portada">
-            <h1>¡ENTRENA CON NOSOTROS!</h1>
-        </section>
+        <h1>¡ENTRENA CON NOSOTROS!</h1>
 
-        <section>
-            <div class="slider">
-
-                <article class="tarjeta">
-                    <a href="#primera-clase">
-                        <img src="./assets/img/primera-clase-gratis.jpg" alt="Primera clase gratis"
-                            class="tarjeta__img"></a>
-                </article>
-
-                <article class="tarjeta">
-                    <a href="#open">
-                        <img src="./assets/img/open-box.jpg" alt="Open box" class="tarjeta__img"></a>
-                </article>
-
-                <article class="tarjeta">
-                    <a href="#nutricion">
-                        <img src="./assets/img/nutricion-personalizada.jpg" alt="Nutricion personalizada"
-                            class="tarjeta__img"> </a>
-                </article>
-
-                <article class="tarjeta">
-                    <a href="#levantamiento">
-                        <img src="./assets/img/levantamiento-olimpico.jpg" alt="Levantamiento olimpico"
-                            class="tarjeta__img"></a>
-                </article>
-
+        <section class="slider-inicio">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="#primera-clase">
+                            <img src="./assets/img/primera-clase-gratis.jpg" class="d-block tarjeta__img" alt="...">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#open">
+                            <img src="./assets/img/open-box.jpg" class="d-block tarjeta__img" alt="...">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#nutricion">
+                            <img src="./assets/img/nutricion-personalizada.jpg" class="d-block tarjeta__img" alt="...">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#levantamiento">
+                        <img src="./assets/img/levantamiento-olimpico.jpg" class="d-block tarjeta__img" alt="...">
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </section>
 
@@ -88,7 +95,6 @@
                     Porro quisquam obcaecati mollitia saepe
                     inventore esse tempora </p>
             </article>
-
 
             <article id="open">
                 <h2>Open box</h2>
@@ -118,7 +124,7 @@
         </section>
 
     </main>
-
+    <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 
 <footer>
