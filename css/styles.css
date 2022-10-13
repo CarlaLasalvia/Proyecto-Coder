@@ -18,15 +18,37 @@ a {
     color: inherit;
 }
 
+h1 {
+    padding: 20px 0;
+    margin: 20px 0;
+    color: yellow;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
 /* ---header--- */
 
 header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: black;
     color: yellow;
+    padding: 8px;
+    top: 0;
+    width: 100%;
+}
+
+header nav ul {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    padding: 10px;
+}
+
+header nav ul a {
+    padding: 0 2%;
+    font-size: 0.7rem;
 }
 
 header img {
@@ -34,22 +56,28 @@ header img {
     height: 60px;
 }
 
-.navpc {
-    width: 70%;
-    height: 30%;
-}
-
-header ul {
-    display: flex;
-    justify-content: space-around;
-}
-
 a:hover {
     color: white;
 }
 
-.navbar {
-    display: none;
+@media (min-width: 768px) {
+
+    header {
+        display: grid;
+        grid-template-columns: 20% 80%;
+
+    }
+
+    header a {
+        text-align: center;
+    }
+
+    header nav ul a {
+        padding: 0 2%;
+        font-size: 1rem;
+    }
+
+
 }
 
 /* ---portada--- */
@@ -62,45 +90,44 @@ a:hover {
     text-align: center;
 } */
 
-h1 {
-    padding: 20px 0;
-    margin: 20px 0;
-    color: yellow;
-    font-family: 'Roboto Condensed', sans-serif;
-    text-align: center;
-    font-weight: 700;
-    font-size: 2.5rem;
-}
 
-/* ---tarjetas informativas inicio --- */
+
+/* ---tarjetas informativas index --- */
 
 .slider-inicio {
-    padding:25px 0;
+    padding: 25px 0;
     flex-direction: row;
     justify-content: center;
     background-color: black;
+
 }
 
 .tarjeta__img {
+    width: 45%;
+    height: auto;
     margin: auto;
     border: yellow solid 3px;
-    width: 300px;
-    height: 300px;
     border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+    .tarjeta__img {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 /* ---descripcion de las tarjetas inicio--- */
 
 .info {
+    display: flex;
+    flex-direction: column;
     background-color: black;
-    margin-top: 100px;
-    margin-bottom: 80px;
-    padding: 20px 0;
     text-align: center;
 }
 
 .info article {
-    padding: 30px 150px;
+    margin: 6%;
 }
 
 .info article h2 {
@@ -147,16 +174,40 @@ td {
     padding: 6px;
 }
 
+@media (min-width: 768px) {
+
+    .tabla__horarios {
+        border-collapse: collapse;
+        margin: 30px auto;
+        background-image: url(../assets/img/fondo-horario.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .tabla__horarios table,
+    tr,
+    th,
+    td {
+        color: white;
+        text-align: center;
+        font-size: 1rem;
+        border: 2px solid;
+        border-color: yellow;
+        padding: 6px;
+    }
+
+}
+
 /* ---seccion coches--- */
 
-.coaches{
-display: grid;
-grid-template-columns: 1fr 3fr;
-grid-template-rows: repeat(4 fr);
-justify-items: right;
-align-items: center;
-gap: 10px;
-margin: 20px;
+.coaches {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(4 fr);
+    justify-items: right;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
 }
 
 .coaches_grilla h2 {
@@ -168,7 +219,7 @@ margin: 20px;
 
 .coaches_grilla p {
     color: white;
-    font-size: 1,5rem;
+    font-size: 1, 5rem;
     font-weight: 200;
 }
 
@@ -180,6 +231,27 @@ margin: 20px;
     border-color: yellow;
 }
 
+/* ---actividades--- */
+
+.actividades {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5% 10%;
+}
+
+.actividades h2 {
+    color: yellow;
+    font-family: 'Roboto Condensed', sans-serif;
+    font: size 3rem;
+    font-weight: 400;
+}
+
+.actividades p {
+    color: white;
+    font-size: 1, 5rem;
+    font-weight: 200;
+}
 
 /* ---footer--- */
 
@@ -193,13 +265,4 @@ footer p {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     padding: 30px 0;
-}
-
-@media screen and (max-width: 768px) {
-
-    .tarjeta__img {
-        width: 60%;
-        height: auto;
-    }
-
 }
