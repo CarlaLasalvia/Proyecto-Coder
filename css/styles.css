@@ -127,6 +127,7 @@ a:hover {
 }
 
 .info article {
+
     margin: 6%;
 }
 
@@ -174,7 +175,7 @@ td {
     padding: 6px;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 
     .tabla__horarios {
         border-collapse: collapse;
@@ -196,7 +197,7 @@ td {
         padding: 6px;
     }
 
-}
+} */
 
 /* ---seccion coches--- */
 
